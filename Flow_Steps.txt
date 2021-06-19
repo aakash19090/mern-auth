@@ -1,0 +1,27 @@
+1.) Install Dependencies - dotenv, express, nodemon, mongoose, etc.
+
+2.) Setup entrypoint 'server.js'
+
+-> create express server & configure ports
+
+3.) Create controllers for Auth Functions -> Register, Login, Forgotpassword, Resetpassword
+
+4.) Setup Routes using auth functions in controllers.
+
+5.) Create Client in 'Client' folder
+
+6.) Create Models & Schemas with Mongoose
+
+7.) Write Register & Login User logic in controller
+
+8.) Password encryption (Hashing) done in Models
+
+9.) Create DB.js in config for connection to MongoDB.
+
+10.) Create Register/Login Validations in Utils
+
+11.) Create Forgotpassword Logic
+
+12.) Create Email service with Nodemailer & SendGrid
+
+12.) Create Reset Password
