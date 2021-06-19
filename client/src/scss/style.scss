@@ -35,6 +35,10 @@ body{
                 margin-bottom: 20px;
                 color: #483d8b;
             }
+
+            &.loading{
+                // filter: blur(2px);
+            }
         }
 
         form{
@@ -74,7 +78,7 @@ body{
                     font-size: 14px;
                     color: #8b0000;
                     display: inline-block;
-                    margin-top: 5px;
+                    margin-top: 10px;
                 }
             }
 
@@ -123,4 +127,16 @@ body{
         }
     }
 
-}
+    #loader{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(0,0,0,0.3);
+    }
+}   
