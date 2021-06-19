@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: #d1d1d1;
+
+}
+
+.app_wrapper{
+    .main{
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        .main_form{
+            min-height: 200px;
+            width: 40%;
+            padding: 30px 40px;
+            border-radius: 10px;
+            box-shadow:  5px 5px 12px #545454,
+                        -5px -5px 12px #ffffff;
+
+            h3{
+                text-align: center;
+                font-size: 24px;
+                margin-bottom: 20px;
+                color: #483d8b;
+            }
+        }
+
+        form{
+            .input_group{
+                margin-bottom: 30px;
+                label{
+                    display: block;
+                    margin-bottom: 8px;
+                    color: #483d8b;
+                }
+                .icon_input{
+                    position: relative;
+                    .icon{
+                        position: absolute;
+                        right: 20px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        cursor: pointer;
+                    }
+                }
+                input{
+                    padding: 20px 20px;
+                    outline: none;
+                    border: none;
+                    width: 100%;
+                    // background: transparent;
+                    border-radius: 6px;
+                    font-size: 15px;
+                    background: #d1d1d1;
+                    letter-spacing: 1px;
+                    -webkit-box-shadow: inset 6px 6px 12px #b8b8b8,
+                                inset -6px -6px 12px #eaeaea;
+
+                }
+
+                .error_msg{
+                    font-size: 14px;
+                    color: #8b0000;
+                    display: inline-block;
+                    margin-top: 5px;
+                }
+            }
+
+            .url{
+                text-align: right;
+                
+                a{
+                    text-decoration: none;
+                    &:hover, &:active, &:visited{
+                        color: #483d8b;
+                    }
+                }
+                &.forgot{
+                    margin-bottom: 10px;
+                }
+                &.sign_up{
+                    margin-bottom: 32px;
+                }
+                &.sign_in{
+                    margin-bottom: 32px;
+                }
+            }
+
+            input:-webkit-autofill,
+            input:-webkit-autofill:hover, 
+            input:-webkit-autofill:focus, 
+            input:-webkit-autofill:active{
+                -webkit-box-shadow: 0 0 0 30px transparent inset;
+            }
+
+            .submit_btn{
+                margin-bottom: 20px;
+                text-align: center;
+                button{
+                    border-radius: 5px;
+                    border: none;
+                    padding: 12px 20px;
+                    min-width: 25%;
+                    cursor: pointer;
+                    font-size: 15px;
+                    background: #483d8b;
+                    color: #fff;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+
+}

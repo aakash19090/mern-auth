@@ -45,15 +45,15 @@ exports.register = async (req, res, next) => {
     })
     const user = await newUser.save();
 
-    
-    // ? STEP:5 Creating Auth Token for user before returning data
-    const token = jwt.sign({
-        id: user._id
-    }, SECRET_KEY, { expiresIn: TOKEN_EXPIRATION })
+    // ? You can issue a Token if you want to Login user after Registration otherwise comment it
+    // // ? STEP:5 Creating Auth Token for user before returning data
+    // const token = jwt.sign({
+    //     id: user._id
+    // }, SECRET_KEY, { expiresIn: TOKEN_EXPIRATION })
 
     // ? Returning Data
 
-    return res.status(201).json({ success: true, user, token })  
+    return res.status(201).json({ success: true, user })  
 
 }
 
@@ -80,14 +80,13 @@ exports.login = async(req, res, next) => {
         errors.general = 'Invalid Credentials!'
         return res.status(404).json({ success: false, errors })
     }else{
-        // ? You can issue a Token if you want to Login user after Registration otherwise comment it
-        // // ? Passwords match, issue a Token & return user with token
+        // ? Passwords match, issue a Token & return user with token
 
-        // const token = jwt.sign({
-        //     id: user._id
-        // }, SECRET_KEY, { expiresIn: TOKEN_EXPIRATION })
+        const token = jwt.sign({
+            id: user._id
+        }, SECRET_KEY, { expiresIn: TOKEN_EXPIRATION })
 
-        return res.status(201).json( { success: true, user } )
+        return res.status(201).json( { success: true, user, token } )
     }
     
 }
